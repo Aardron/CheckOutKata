@@ -47,4 +47,12 @@ class ItemTest {
         Item item = new Item("#",1);
         assertEquals(null,item.getSKU());
     }
+
+
+    @Test
+    @DisplayName("SKU can only be alphabetical uppercase")
+    void testSKUisAlphabeticalUpperCase(){
+        Item item = new Item("a",1);
+        assertEquals("A",item.getSKU());
+    }
 }

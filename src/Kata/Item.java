@@ -10,7 +10,11 @@ public class Item {
     private int price;
 
     public Item(String SKU, int price){
-        this.SKU=SKU;
+        if(SKU.matches("[a-zA-Z]+")){
+            this.SKU= SKU;
+        }else{
+            this.SKU= null;
+        }
         this.price=price;
     }
 
