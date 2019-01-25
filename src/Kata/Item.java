@@ -11,7 +11,7 @@ public class Item {
 
     public Item(String SKU, int price){
         if(SKU.matches("[a-zA-Z]+")){
-            this.SKU= SKU;
+            this.SKU= SKU.toUpperCase();
         }else{
             this.SKU= null;
         }
