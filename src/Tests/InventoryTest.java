@@ -1,7 +1,7 @@
 package Tests;
 
-import Kata.Inventory;
-import Kata.Item;
+import Kata.Inventory.Inventory;
+import Kata.Inventory.Item;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

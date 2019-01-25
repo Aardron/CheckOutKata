@@ -1,4 +1,4 @@
-package Kata;
+package Kata.Inventory;
 
 import java.util.List;
 

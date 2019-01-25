@@ -1,4 +1,4 @@
-package Kata;
+package Kata.Inventory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Anthony on 25/01/2019.
  */
-public class Inventory implements  Iinventory{
+public class Inventory implements Iinventory {
     private List<Item> inventory;
 
     public Inventory(){

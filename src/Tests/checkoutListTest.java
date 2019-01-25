@@ -1,5 +1,7 @@
 package Tests;
 
+import Kata.Checkout.ItemInStore;
+import Kata.Checkout.checkoutList;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -9,6 +11,9 @@ class checkoutListTest {
 
     @Test
     void addToList() {
+        checkoutList checkout = new checkoutList();
+        ItemInStore item = new ItemInStore("J");
+        checkout.addToList(item);
 
 
     }

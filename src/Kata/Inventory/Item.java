@@ -1,4 +1,4 @@
-package Kata;
+package Kata.Inventory;
 
 /**
  * Created by Anthony on 25/01/2019.
