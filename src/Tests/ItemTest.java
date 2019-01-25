@@ -1,6 +1,7 @@
 package Tests;
 
 import Kata.Item;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,22 +12,32 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ItemTest {
 
     @Test
+    @DisplayName("Get the SKU name")
     void getSKU() {
         Item item = new Item("A",1);
         assertEquals("A",item.getSKU());
     }
 
     @Test
+    @DisplayName("Set the SKU name")
     void setSKU() {
+        Item item = new Item("A",1);
+        item.setSKU("H");
+        assertEquals("H",item.getSKU());
     }
 
     @Test
+    @DisplayName("Get the Unit price")
     void getPrice() {
         Item item = new Item("A",1);
         assertEquals(1,item.getPrice());
     }
 
     @Test
+    @DisplayName("Set unit price")
     void setPrice() {
+        Item item = new Item("A",1);
+        item.setPrice(5);
+        assertEquals(5,item.getPrice());
     }
 }
