@@ -40,4 +40,11 @@ class ItemTest {
         item.setPrice(5);
         assertEquals(5,item.getPrice());
     }
+
+    @Test
+    @DisplayName("SKU can only be alphabetical")
+    void testSKUisAlphabetical(){
+        Item item = new Item("#",1);
+        assertEquals(null,item.getSKU());
+    }
 }
