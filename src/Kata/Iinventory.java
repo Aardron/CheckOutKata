@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface Iinventory {
 
-     void addItem();
+     void addItem(String SKU, int price);
 
      List<Item> getInventory();
 

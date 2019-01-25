@@ -3,6 +3,7 @@ package Tests;
 import Kata.Inventory;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
@@ -18,12 +19,16 @@ class InventoryTest {
     @Test
     void getInventoryWithContents() {
         Inventory inv = new Inventory();
-        inv.addItem();
-        assertNotEquals(null,inv.getInventory());
+        inv.addItem("a",2);
+        assertEquals(1,inv.getInventory().size());
     }
 
     @Test
     void setInventory() {
+        Inventory test = new Inventory();
+        test.addItem("b",4);
+        Inventory inv = test;
+        assertEquals(inv,test);
     }
 
     @Test
