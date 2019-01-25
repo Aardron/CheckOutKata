@@ -24,7 +24,8 @@ public class Inventory implements  Iinventory{
     }
 
     @Override
-    public void addItem() {
-
+    public void addItem(String SKU, int price) {
+        Item newItem = new Item(SKU,price);
+        inventory.add(newItem);
     }
 }

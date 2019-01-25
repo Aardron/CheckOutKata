@@ -10,8 +10,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class InventoryTest {
     @Test
-    void getInventory() {
+    void getInventoryWithoutContents() {
         Inventory inv = new Inventory();
+        assertNotEquals(null,inv.getInventory());
+    }
+
+    @Test
+    void getInventoryWithContents() {
+        Inventory inv = new Inventory();
+        inv.addItem();
         assertNotEquals(null,inv.getInventory());
     }
 
