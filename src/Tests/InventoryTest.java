@@ -1,9 +1,12 @@
 package Tests;
 
 import Kata.Inventory;
+import Kata.Item;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
@@ -39,4 +42,29 @@ class InventoryTest {
         assertEquals("J",inv.getInventory().get(0).getSKU());
     }
 
+    @Test
+    @DisplayName("No duplicate SKU check")
+    void noDuplicatesSKU() {
+        Inventory inv = new Inventory();
+        inv.addItem("J", 55);
+        inv.addItem("i", 2);
+        inv.addItem("A", 2);
+        inv.addItem("i", 1);
+
+        int length = inv.getInventory().size();
+        boolean isSame = false;
+
+        for (int i =0;i<length;i++) {
+            Item A =inv.getInventory().get(i);
+            for (int j =i+1;j<length;j++) {
+                Item B =inv.getInventory().get(j);
+                if(A.getSKU().equals(B.getSKU())){
+                    isSame = true;
+                    break;
+                }
+            }
+        }
+
+        assertFalse(isSame);
+    }
 }
