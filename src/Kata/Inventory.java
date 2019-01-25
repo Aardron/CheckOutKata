@@ -55,4 +55,9 @@ public class Inventory implements  Iinventory{
 
     }
 
+    @Override
+    public void removeItem(String SKU){
+
+    }
+
 }

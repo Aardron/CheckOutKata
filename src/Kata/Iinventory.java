@@ -12,4 +12,6 @@ public interface Iinventory {
      List<Item> getInventory();
 
      void setInventory(List inventory);
+
+     void removeItem(String SKU);
 }

@@ -67,4 +67,20 @@ class InventoryTest {
 
         assertFalse(isSame);
     }
+
+    @Test
+    void itemNotRemoved(){
+        Inventory inv = new Inventory();
+        inv.addItem("J", 55);
+        inv.removeItem("I");
+        assertEquals(1,inv.getInventory().size());
+    }
+
+    @Test
+    void itemRemoved(){
+        Inventory inv = new Inventory();
+        inv.addItem("J",55);
+        inv.removeItem("J");
+        assertEquals(0,inv.getInventory().size());
+    }
 }

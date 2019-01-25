@@ -15,7 +15,11 @@ public class Item {
         }else{
             this.SKU= null;
         }
-        this.price=price;
+        if(price==0){
+            this.price=1;
+        }else {
+            this.price = price;
+        }
     }
 
     public String getSKU() {
