@@ -27,5 +27,15 @@ public class Inventory implements  Iinventory{
     public void addItem(String SKU, int price) {
         Item newItem = new Item(SKU,price);
         inventory.add(newItem);
+        removeNullSKU();
     }
+
+    public void removeNullSKU(){
+        for(int i =0; i<getInventory().size();i++){
+            if( getInventory().get(i).getSKU().equals("")){
+                getInventory().remove(i);
+            }
+        }
+    }
+
 }
