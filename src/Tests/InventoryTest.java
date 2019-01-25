@@ -83,4 +83,24 @@ class InventoryTest {
         inv.removeItem("J");
         assertEquals(0,inv.getInventory().size());
     }
+
+    @Test
+    void itemRemovedFromMultipleItems(){
+        Inventory inv = new Inventory();
+        inv.addItem("J",55);
+        inv.addItem("I",1);
+        inv.addItem("A",55);
+        inv.removeItem("J");
+        assertEquals(2,inv.getInventory().size());
+    }
+
+    @Test
+    void multipleItemRemoval(){
+        Inventory inv = new Inventory();
+        inv.addItem("J",55);
+        inv.addItem("J",1);
+        inv.addItem("A",55);
+        inv.removeItem("J");
+        assertEquals(1,inv.getInventory().size());
+    }
 }

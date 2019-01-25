@@ -57,7 +57,11 @@ public class Inventory implements  Iinventory{
 
     @Override
     public void removeItem(String SKU){
-
+        for(int i=0;i<inventory.size();i++){
+            if(inventory.get(i).getSKU().equals(SKU)){
+                inventory.remove(i);
+            }
+        }
     }
 
 }
