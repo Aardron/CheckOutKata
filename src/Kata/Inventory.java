@@ -27,6 +27,7 @@ public class Inventory implements  Iinventory{
     public void addItem(String SKU, int price) {
         Item newItem = new Item(SKU,price);
         inventory.add(newItem);
+        removeDuplicates();
         removeNullSKU();
     }
 
@@ -36,6 +37,22 @@ public class Inventory implements  Iinventory{
                 getInventory().remove(i);
             }
         }
+    }
+
+    private void removeDuplicates(){
+
+        int length = getInventory().size();
+
+        for (int i =0;i<length;i++) {
+            Item A =getInventory().get(i);
+            for (int j =i+1;j<length;j++) {
+                Item B =getInventory().get(j);
+                if(A.getSKU().equals(B.getSKU())){
+                    B.setSKU("");
+                }
+            }
+        }
+
     }
 
 }

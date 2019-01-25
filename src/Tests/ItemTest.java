@@ -55,4 +55,12 @@ class ItemTest {
         Item item = new Item("a",1);
         assertEquals("A",item.getSKU());
     }
+
+    @Test
+    @DisplayName("Each item must have a price")
+    void mustHavePrice(){
+        Item item = new Item("a",0);
+        assertEquals(1,item.getPrice());
+    }
+
 }
