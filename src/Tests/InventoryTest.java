@@ -33,6 +33,10 @@ class InventoryTest {
 
     @Test
     void addItem() {
+        Inventory inv = new Inventory();
+        inv.addItem("J", 55);
+        assertEquals(55,inv.getInventory().get(0).getPrice());
+        assertEquals("J",inv.getInventory().get(0).getSKU());
     }
 
 }
