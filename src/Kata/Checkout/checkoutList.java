@@ -19,4 +19,9 @@ public class checkoutList implements ICheckout {
     public void removeFromList(){
 
     }
+
+    @Override
+    public List<ItemInStore> getList() {
+        return checkoutList;
+    }
 }
